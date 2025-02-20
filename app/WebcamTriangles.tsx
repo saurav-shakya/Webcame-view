@@ -429,17 +429,17 @@ const WebcamTriangles: React.FC = () => {
     setIsVideoReady(true)
   }
 
+  const handleCameraError: React.ReactEventHandler<HTMLVideoElement> = (event) => {
+    console.error("Camera error:", event)
+    alert("Camera access failed. Please check your camera permissions and try again.")
+  }
+
   // Camera settings add karenge
   const videoConstraints = {
     width: 1280,
     height: 720,
     facingMode: "user",
     aspectRatio: 16/9
-  }
-
-  const handleCameraError = (event: Error | string) => {
-    console.error("Camera error:", event)
-    alert("Camera access failed. Please check your camera permissions and try again.")
   }
 
   return (

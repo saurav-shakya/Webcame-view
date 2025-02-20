@@ -1,2 +1,1 @@
-# camera-view
-camera view 
+400: Invalid request
